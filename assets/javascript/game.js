@@ -23,20 +23,25 @@
             winCount++;
             turns = 9;
             allUserGuesses.length = 0;
-            document.getElementById('wins').innerHTML = winCount;
             alert('We have a winner! The correct letter was ' + computerGuess);
+            document.getElementById('wins').innerHTML = winCount;
+            document.getElementById('guesses').innerHTML = (allUserGuesses);
+            document.getElementById('guesses-left').innerHTML = turns;
             console.log('User Wins: ' + winCount);
-         } else if (turns == 0){
+         } else if (turns === 1){
                 lossesCount++;
                 turns = 9;
                 allUserGuesses.length = 0;
-                document.getElementById('losses').innerHTML = lossesCount;
                 alert('Game Over! Try again!');
+                document.getElementById('losses').innerHTML = lossesCount;
+                document.getElementById('guesses').innerHTML = (allUserGuesses);
+                document.getElementById('guesses-left').innerHTML = turns;
                 console.log('User Losses: ' + losses);
             }
             else if (userGuess !== computerGuess){
                 turns--;
                 document.getElementById('guesses-left').innerHTML = turns;
+                console.log('Turns: ' + turns);
             }
 
     };
