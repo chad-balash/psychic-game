@@ -22,7 +22,7 @@
         if (userGuess === computerGuess) {
             winCount++;
             turns = 9;
-            allUserGuesses.length = 0;
+            allUserGuesses = [];
             alert('We have a winner! The correct letter was ' + computerGuess);
             document.getElementById('wins').innerHTML = winCount;
             document.getElementById('guesses').innerHTML = (allUserGuesses);
@@ -31,7 +31,7 @@
          } else if (turns === 1){
                 lossesCount++;
                 turns = 9;
-                allUserGuesses.length = 0;
+                allUserGuesses = [];
                 alert('Game Over! Try again!');
                 document.getElementById('losses').innerHTML = lossesCount;
                 document.getElementById('guesses').innerHTML = (allUserGuesses);
