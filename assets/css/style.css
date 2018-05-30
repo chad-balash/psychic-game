@@ -1,0 +1,60 @@
+body {
+    color: #000000;
+    background-color: #000000;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.main {
+    height: 900px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/crystal-ball.jpeg");
+      
+}
+
+.game-content {
+    max-width: 500px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    animation: fadein 3s ease;
+    font-size: 24px;
+    font-weight: bold;
+    background: rgba(245, 247, 245, 0.6);
+    padding:20px;
+    box-shadow: 2px 4px #000000;
+    border-radius: 4px;
+}
+
+  .game-content.show {
+    opacity: 1;
+  }
+  
+  @keyframes fadein {
+    from {
+      opacity: 0.1;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .game-title {
+    font-size: 48px;
+    font-weight: bold;
+    padding: 0px 15px 15px 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #000000;
+    text-align: center;
+  }
+
+  .question {
+      text-align: center;
+      padding-bottom: 10px;
+  }
